@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Custom Device.xsd">
+<XSDVersion Major="2010" Minor="0" Fix="0" Build="0" />
+  <AddMenu>
+    <eng>National Instruments::DCM</eng>
+    <loc>National Instruments::DCM</loc>
+  </AddMenu>
+  <Version>2016.1.11.0</Version>
+  <Type>Asynchronous</Type>
+  <MaxOccurrence>-1</MaxOccurrence>
+  <MainPageGUID>1e4c05d8-9abf-4fec-b650-9db71821173c</MainPageGUID>
+  <InitializationVI>
+    <Type>Action</Type>
+    <Item2Launch>
+      <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Initialization VI.vi</Path>
+    </Item2Launch>
+  </InitializationVI>
+  <CustomDeviceVI>
+		<SourceDistribution>
+			<Source>
+				<SupportedTarget>Linux_32_ARM</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\Linux_32_ARM\DCM RT.llb\DCM RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\NIVeriStand\Custom Devices\DCM RT.llb\DCM RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+			<Source>
+				<SupportedTarget>Pharlap</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\Pharlap\DCM RT.llb\DCM RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\NIVeriStand\Custom Devices\DCM RT.llb\DCM RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+		</SourceDistribution>
+  </CustomDeviceVI>
+  <Dependencies>
+  	<Dependency>
+      <SupportedTarget>Linux_32_ARM</SupportedTarget>
+      <Source>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\DCM\Linux_32_ARM\DCM-Classes.lvlibp</Path>
+      </Source>
+      <RealTimeSystemDestination>c:\ni-rt\NIVeriStand\Custom Devices\DCM-Classes.lvlibp</RealTimeSystemDestination>
+    </Dependency>
+    <Dependency>
+      <SupportedTarget>Pharlap</SupportedTarget>
+      <Source>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\DCM\Pharlap\DCM-Classes.lvlibp</Path>
+      </Source>
+      <RealTimeSystemDestination>c:\ni-rt\NIVeriStand\Custom Devices\DCM-Classes.lvlibp</RealTimeSystemDestination>
+    </Dependency>
+  </Dependencies>
+  <Pages>
+ 	<Page>
+      	<Name>
+        	<eng>DCM</eng>
+        	<loc>DCM</loc>
+      	</Name>
+      	<GUID>1e4c05d8-9abf-4fec-b650-9db71821173c</GUID>
+		<Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\DCM.png</Path>
+		</Glyph>
+      	<Item2Launch>
+        	<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\DCM Configuration.llb\Main Page.vi</Path>
+      	</Item2Launch>
+	  	<RunTimeMenu>
+			<MenuItem>
+				<GUID>f10bd84a-c71b-4bab-a7fa-9098b9fd69a6</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableMain - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+      	<ActionVIOnLoad>
+        	<Type>To Common Doc Dir</Type>
+        	<Path>Custom Devices\DCM\DCM Configuration.llb\Main On Load Action VI.vi</Path>
+      	</ActionVIOnLoad>
+      	<ActionVIOnCompile>
+        	<Type>To Common Doc Dir</Type>
+        	<Path>Custom Devices\DCM\DCM Configuration.llb\Main On Compile Action VI.vi</Path>
+      	</ActionVIOnCompile>
+    </Page>
+    <Page>
+      	<Name>
+        	<eng>DCM</eng>
+        	<loc>DCM</loc>
+      	</Name>
+      	<GUID>f599dfb9-ed26-42aa-8cdc-f57f090e1b11</GUID>
+		<Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\DCM-disabled.png</Path>
+		</Glyph>
+      	<Item2Launch>
+        	<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\DCM Configuration.llb\Main Page.vi</Path>
+      	</Item2Launch>
+	  	<RunTimeMenu>
+			<MenuItem>
+				<GUID>f10bd84a-c71b-4bab-a7fa-9098b9fd69a6</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableMain - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+      	<ActionVIOnLoad>
+        	<Type>To Common Doc Dir</Type>
+        	<Path>Custom Devices\DCM\DCM Configuration.llb\Main On Load Action VI.vi</Path>
+      	</ActionVIOnLoad>
+   	</Page>
+	<Page>
+		<Name>
+			<eng>Channel (delete protected)</eng>
+			<loc>Channel (delete protected)</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>c457cef7-60a4-4609-953f-49bd172293ff</GUID>
+		<Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\default fpga channel.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>Absolute</Type>
+			<Path>System UI VIs\Custom Device\Custom Device Channel.vi</Path>
+		</Item2Launch>
+		<Help>
+			<Item2Launch>
+				<Type>To Base</Type>
+				<Path>Veristand.chm\Custom_Devices_SE.html</Path>
+			</Item2Launch>
+		<FileType>chm</FileType>
+		</Help>
+	</Page>
+		<Page>
+		<Name>
+			<eng>Waveform (delete protected)</eng>
+			<loc>Waveform (delete protected)</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>7d419a3c-75c3-4347-a0a2-a7591295b469</GUID>
+		<Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\waveform.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>Absolute</Type>
+			<Path>System UI VIs\Custom Device\Custom Device Waveform.vi</Path>
+		</Item2Launch>
+		<Help>
+			<Item2Launch>
+				<Type>To Base</Type>
+				<Path>Veristand.chm\Custom_Devices_SE.html</Path>
+			</Item2Launch>
+		<FileType>chm</FileType>
+		</Help>
+	</Page>
+	<Page>
+		<Name>
+			<eng>Section Read(delete protected)</eng>
+			<loc>Section Read(delete protected)</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>6b94385d-a8fe-4299-8780-02040b069697</GUID>
+		<Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\read.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>Absolute</Type>
+			<Path>System UI VIs\Custom Device\Custom Device Section.vi</Path>
+		</Item2Launch>
+		<Help>
+			<Item2Launch>
+				<Type>To Base</Type>
+				<Path>Veristand.chm\Custom_Devices_SE.html</Path>
+			</Item2Launch>
+			<FileType>chm</FileType>
+		</Help>
+	</Page>
+	<Page>
+		<Name>
+			<eng>Section Write(delete protected)</eng>
+			<loc>Section Write(delete protected)</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>e1e0ebe0-7744-485e-8dcf-da45db37f6d7</GUID>
+		<Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\write.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>Absolute</Type>
+			<Path>System UI VIs\Custom Device\Custom Device Section.vi</Path>
+		</Item2Launch>
+		<Help>
+			<Item2Launch>
+				<Type>To Base</Type>
+				<Path>Veristand.chm\Custom_Devices_SE.html</Path>
+			</Item2Launch>
+			<FileType>chm</FileType>
+		</Help>
+	</Page>
+	<Page>
+      <Name>
+        <eng>EPTx</eng>
+        <loc>EPTx</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>a5efee57-fd86-4078-b618-b0705acc47b3</GUID>
+      <Glyph>
+				<Type>To Common Doc Dir</Type>
+				<Path>Custom Devices\DCM\Data\eps.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\EPTx.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>DI (Bank A)</eng>
+        <loc>DI (Bank A)</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>f8d973f8-2e11-4124-aa70-a6fee72385c1</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\injector.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\DI (Bank A).vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>46df0418-deb6-4d59-8d20-0ae52d1e3a0a</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableBankA - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>DI (Bank A)</eng>
+        <loc>DI (Bank A)</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>0515dfd1-3106-4f60-bfdc-e9560b274cce</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\injector.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\DI (Bank A).vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>46df0418-deb6-4d59-8d20-0ae52d1e3a0a</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableBankA - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>DI (Bank B)</eng>
+        <loc>DI (Bank B)</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>a63b3095-c73b-454f-88f9-68383dab1f80</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\injector.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\DI (Bank B).vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>4d434972-4aa6-45af-92be-8034ae6f2b6c</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableBankB - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>DI (Bank B)</eng>
+        <loc>DI (Bank B)</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>ba7b8b99-1cfb-447e-88fa-e4ec3244df79</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\injector.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\DI (Bank B).vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>4d434972-4aa6-45af-92be-8034ae6f2b6c</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableBankB - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>DI Scope</eng>
+        <loc>DI Scope</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>4a79ddeb-a706-489a-9bbf-290de6baccd6</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\current trace.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\DI Scope.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Half-H</eng>
+        <loc>Half-H</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>f16175a1-fad9-427d-a4ec-263940a8031d</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\halfH.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Half-H.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>e0f39d5d-4753-4142-ac63-84ba8dc69499</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableHalfH - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Half-H</eng>
+        <loc>Half-H</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>e47a1de0-27ee-4cc7-82d3-285b476618bb</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\halfH.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Half-H.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>e0f39d5d-4753-4142-ac63-84ba8dc69499</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableHalfH - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Half-H Scope</eng>
+        <loc>Half-H Scope</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>6092b7fa-6603-4513-a21d-943bed09a899</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\current trace.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Half-H Scope.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Differential IO</eng>
+        <loc>Differential IO</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>2628923f-4c3d-4e64-9018-fe4e0bf24e80</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\diff sig.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Differential IO.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>917ddf8a-c153-44a1-b2f2-6ada7a308212</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableDiffIO - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Differential IO</eng>
+        <loc>Differential IO</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>faee9789-46db-458a-959a-05641d5004e2</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\diff sig.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Differential IO.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>917ddf8a-c153-44a1-b2f2-6ada7a308212</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableDiffIO - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>VR-Hall</eng>
+        <loc>VR-Hall</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>cf54691f-9754-47a4-ae55-d66845591b75</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\VR-Hall.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\VR-Hall.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>ESTTL</eng>
+        <loc>ESTTL</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>38e1f48f-5a27-4a02-97fd-d113d0b0a1a5</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\esttl.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\ESTTL.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>e242de91-e1a9-42ca-a209-c7115f438d37</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableESTTL - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>ESTTL</eng>
+        <loc>ESTTL</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>2ad3d1d5-7c00-47db-b770-0db9f08c91b8</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\esttl.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\ESTTL.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>e242de91-e1a9-42ca-a209-c7115f438d37</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableESTTL - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>UEGO</eng>
+        <loc>UEGO</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>5fb3e6f2-894a-4878-a5bb-3886d90bfc3e</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\O2.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\UEGO.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Aux Inputs</eng>
+        <loc>Aux Inputs</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>4ae80cd4-ec55-4ec1-b4bb-2001c61b6b14</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\splitsignals.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Aux-Inputs.vi</Path>
+      </Item2Launch>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Knock</eng>
+        <loc>Knock</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>19fe4c45-3921-4e09-b642-633bf2891a16</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\hammer.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Knock.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>8a875cae-6cab-46b6-b4a7-b8cdf862ac1d</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableKnock - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Knock</eng>
+        <loc>Knock</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>a0532e73-7f55-4d0e-9b0f-dca8ef6be3da</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\hammer.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Knock.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>8a875cae-6cab-46b6-b4a7-b8cdf862ac1d</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableKnock - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>	
+	<Page>
+      <Name>
+        <eng>Skip Fire</eng>
+        <loc>Skip Fire</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>1ac39163-a8a7-406d-af0d-2094f9d35b5e</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\skip.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Skipfire.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>bbdda3d2-34c9-4362-989f-a288134847eb</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Disable</eng>
+					<loc>Disable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableSkipfire - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>
+	<Page>
+      <Name>
+        <eng>Skip Fire</eng>
+        <loc>Skip Fire</loc>
+      </Name>
+	  <DisallowRenaming>true</DisallowRenaming>
+	  <DeleteProtection>true</DeleteProtection>
+      <GUID>c54507d4-3cef-40f9-a6c1-87c28a1ea6a0</GUID>
+      <Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\skip.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\DCM\DCM Configuration.llb\Skipfire.vi</Path>
+      </Item2Launch>
+		<RunTimeMenu>
+			<MenuItem>
+				<GUID>bbdda3d2-34c9-4362-989f-a288134847eb</GUID>
+				<Type>Action</Type>
+				<Name>
+					<eng>Enable</eng>
+					<loc>Enable</loc>
+				</Name>
+				<Item2Launch>
+					<Type>To Common Doc Dir</Type>
+					<Path>Custom Devices\DCM\DCM Configuration.llb\EnableDisableSkipfire - Right Click.vi</Path>
+				</Item2Launch>
+			</MenuItem>
+		</RunTimeMenu>
+    </Page>	
+	<Page>
+		<Name>
+			<eng>System</eng>
+			<loc>System</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>d2cc065c-850f-4944-a4c9-610c3de05f2d</GUID>
+		<Glyph>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\Data\power button.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>To Common Doc Dir</Type>
+			<Path>Custom Devices\DCM\DCM Configuration.llb\System.vi</Path>
+		</Item2Launch>
+    </Page>		
+	<Page>
+		<Name>
+			<eng>Status</eng>
+			<loc>Status</loc>
+		</Name>
+		<DisallowRenaming>true</DisallowRenaming>
+		<DeleteProtection>true</DeleteProtection>
+		<GUID>39854a26-935c-4763-8ef8-825ef45b52f8</GUID>
+		<Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\system variable.png</Path>
+		</Glyph>
+		<Item2Launch>
+			<Type>Absolute</Type>
+			<Path>System UI VIs\Custom Device\Custom Device Section.vi</Path>
+		</Item2Launch>
+		<Help>
+			<Item2Launch>
+				<Type>To Base</Type>
+				<Path>Veristand.chm\Custom_Devices_SE.html</Path>
+			</Item2Launch>
+			<FileType>chm</FileType>
+		</Help>
+	</Page>	
+</Pages>
+  <CustomXML>
+    <Dummy></Dummy>
+  </CustomXML>
+</CustomDevice>

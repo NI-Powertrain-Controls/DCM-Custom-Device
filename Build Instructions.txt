@@ -1,0 +1,19 @@
+Manual Build Instructions
+
+1. Open DCM Classes\DCM Classes.lvproj
+
+2. Build source distributions (Linux32 and Pharlap) of all DCM - RT libraries and classes
+
+3. Open DCM Classes\DCM Classes Packed.lvproj
+
+4. Build packed libraries from source distributions in (1) for both Linux32 and Pharlap
+
+5. Open Development\DCM Custom Device.lvproj (repoint to Built\DCM Classes Packed\Pharlap\C\DCM-Classes.lvlibp)
+
+6. Build My Computer -> Build Specifications -> Configuration
+
+7. Build My Computer -> Build Specifications -> RT
+
+8. Open Development\DCM Custom Device - Linux32.lvproj (repoint to Built\DCM Classes Packed\Linux_32_ARM\DCM-Classes.lvlibp)
+
+9. Build My Computer -> Build Specifications -> RT 
